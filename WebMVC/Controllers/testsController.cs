@@ -59,14 +59,18 @@ namespace WebMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                SqlConnection cnn = (SqlConnection)_context.Database.GetDbConnection();
-                SqlCommand cmd = cnn.CreateCommand();
-                cnn.Open();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "CreateTest";
-                cmd.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = test.Name;
-                cmd.ExecuteNonQuery();
-                cnn.Close();
+                testDAL dal = new testDAL();
+                await dal.CreateMetodo(test);
+
+                //SqlConnection cnn = (SqlConnection)_context.Database.GetDbConnection();
+                //SqlCommand cmd = cnn.CreateCommand();
+                //cnn.Open();
+                //cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.CommandText = "CreateTest";
+                //cmd.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = test.Name;
+                //cmd.ExecuteNonQuery();
+                //cnn.Close();
+
 
                 //_context.Add(test);
                 //await _context.SaveChangesAsync();
@@ -107,15 +111,18 @@ namespace WebMVC.Controllers
             {
                 try
                 {
-                    SqlConnection cnn = (SqlConnection)_context.Database.GetDbConnection();
-                    SqlCommand cmd = cnn.CreateCommand();
-                    cnn.Open();
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "EditarTest";
-                    cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
-                    cmd.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = test.Name;
-                    cmd.ExecuteNonQuery();
-                    cnn.Close();
+                    testDAL dal = new testDAL();
+                    await dal.EditMetodo(id, test);
+
+                    //SqlConnection cnn = (SqlConnection)_context.Database.GetDbConnection();
+                    //SqlCommand cmd = cnn.CreateCommand();
+                    //cnn.Open();
+                    //cmd.CommandType = CommandType.StoredProcedure;
+                    //cmd.CommandText = "EditarTest";
+                    //cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                    //cmd.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = test.Name;
+                    //cmd.ExecuteNonQuery();
+                    //cnn.Close();
                     //_context.Update(test);
                     //await _context.SaveChangesAsync();
                 }
@@ -158,14 +165,18 @@ namespace WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            SqlConnection cnn = (SqlConnection)_context.Database.GetDbConnection();
-            SqlCommand cmd = cnn.CreateCommand();
-            cnn.Open();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "DeleteTest";
-            cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
-            cmd.ExecuteNonQuery();
-            cnn.Close();
+            testDAL dal = new testDAL();
+
+            await dal.DeleteMetodo(id);
+            //SqlConnection cnn = (SqlConnection)_context.Database.GetDbConnection();
+            //SqlCommand cmd = cnn.CreateCommand();
+            //cnn.Open();
+            //cmd.CommandType = CommandType.StoredProcedure;
+            //cmd.CommandText = "DeleteTest";
+            //cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+            //cmd.ExecuteNonQuery();
+            //cnn.Close();
+
             //var test = await _context.tests.FindAsync(id);
             //_context.tests.Remove(test);
             //await _context.SaveChangesAsync();
