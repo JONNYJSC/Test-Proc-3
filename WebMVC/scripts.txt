@@ -1,28 +1,27 @@
-﻿Alter PROCEDURE [dbo].[CreateTest]
+Create PROCEDURE [dbo].[CreateTest]
     @Name Varchar(50)
 AS
 BEGIN
-    SET NOCOUNT ON;
     Insert into tests(
            Name
            )
  Values (@Name)
 END
 
-Alter PROCEDURE [dbo].[GetTest]
+Create PROCEDURE [dbo].[GetTest]
 AS
 BEGIN
     SELECT Name FROM tests
 END
 
-Alter proc [dbo].[DeleteTest]
+Create proc [dbo].[DeleteTest]
   @Id int
   as
   begin
 	delete from tests where Id = @Id
 	END
     
-	Alter proc [dbo].[EditarTest]
+Create proc [dbo].[EditarTest]
   @Id int, 
   @Name varchar(30)
   as
