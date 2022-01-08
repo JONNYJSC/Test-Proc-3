@@ -1,4 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,8 +11,8 @@ namespace WebMVC.Models
 {
     public class testDAL
     {
-    public static string cadena = "Server=JONNYJSC-DELL; Initial Catalog=test; User ID=sa; Password=admin123; Trusted_Connection=false";
-        
+        string cadena = "Server=JONNYJSC-DELL; Initial Catalog=test; User ID=sa; Password=admin123; Trusted_Connection=false";
+
         public async Task<test> CreateMetodo(test t)
         {
             try

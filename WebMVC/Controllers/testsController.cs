@@ -21,9 +21,14 @@ namespace WebMVC.Controllers
         }
 
         // GET: tests
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View(await _context.tests.ToListAsync());
+        //}
+
+        public async Task<ActionResult<IEnumerable<test>>> Index()
         {
-            return View(await _context.tests.ToListAsync());
+            return View(await _context.tests.FromSqlRaw("GetTest").ToListAsync());
         }
 
         // GET: tests/Details/5
@@ -166,8 +171,8 @@ namespace WebMVC.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             testDAL dal = new testDAL();
-
             await dal.DeleteMetodo(id);
+
             //SqlConnection cnn = (SqlConnection)_context.Database.GetDbConnection();
             //SqlCommand cmd = cnn.CreateCommand();
             //cnn.Open();

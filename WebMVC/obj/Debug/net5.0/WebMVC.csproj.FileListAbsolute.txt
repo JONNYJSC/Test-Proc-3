@@ -148,4 +148,5 @@ C:\Users\jjona\Desktop\WebMVC\WebMVC\obj\Debug\net5.0\Razor\Views\tests\Delete.c
 C:\Users\jjona\Desktop\WebMVC\WebMVC\obj\Debug\net5.0\Razor\Views\tests\Details.cshtml.g.cs
 C:\Users\jjona\Desktop\WebMVC\WebMVC\obj\Debug\net5.0\Razor\Views\tests\Edit.cshtml.g.cs
 C:\Users\jjona\Desktop\WebMVC\WebMVC\obj\Debug\net5.0\Razor\Views\tests\Index.cshtml.g.cs
+C:\Users\jjona\Desktop\WebMVC\WebMVC\bin\Debug\net5.0\Dapper.dll
 C:\Users\jjona\Desktop\WebMVC\WebMVC\obj\Debug\net5.0\WebMVC.csproj.AssemblyReference.cache

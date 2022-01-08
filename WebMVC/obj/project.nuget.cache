@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YEY5FIIpiIrqB7x36XEcFQWPr1V5InTugq4flGRiIP0nRafWdfXCkcTj3rdpHCtXZNHZvPuK3EWlQhM6CL5TwA==",
+  "dgSpecHash": "1a1mc2MWWu6YVOcf807xkZ5EpfLVIKuOQk2lgRFYOT9hfWvzaMCoCiB1Y34xMkChZ6nz+pLs4aWCVPpBjdXWgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jjona\\Desktop\\WebMVC\\WebMVC\\WebMVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jjona\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\jjona\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jjona\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\jjona\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
